@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f3f1eb;
+  color: #111111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes shimmer-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-7 lg:px-10 xl:px-12;
+  }
+
+  .section-label {
+    @apply text-[0.68rem] uppercase tracking-[0.18em] text-muted;
+  }
+
+  .soft-card {
+    @apply rounded-card border border-line bg-panel backdrop-blur;
+  }
+
+  .shimmer-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    isolation: isolate;
+    background: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .shimmer-button::before {
+    content: "";
+    position: absolute;
+    inset: -7px;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    transform-origin: center;
+    will-change: transform;
+    padding: 5px;
+    background: conic-gradient(
+      from 220deg,
+      rgba(167, 154, 255, 0) 0deg,
+      rgba(167, 154, 255, 0) 292deg,
+      rgba(167, 154, 255, 0.03) 306deg,
+      rgba(167, 154, 255, 0.12) 323deg,
+      rgba(142, 194, 255, 0.16) 338deg,
+      rgba(255, 183, 220, 0.12) 350deg,
+      rgba(255, 183, 220, 0.03) 356deg,
+      rgba(255, 183, 220, 0) 360deg
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    filter: blur(9px);
+    opacity: 0.42;
+    animation: shimmer-border 8s linear infinite;
+  }
+
+  .shimmer-button:hover::before {
+    opacity: 0.5;
+  }
+}
