@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes shimmer-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   color-scheme: light;
 }
@@ -35,12 +41,6 @@ img {
   max-width: 100%;
 }
 
-@keyframes shimmer-border {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @layer components {
   .section-shell {
     @apply mx-auto w-full max-w-[1320px] px-5 sm:px-7 lg:px-10 xl:px-12;
@@ -60,42 +60,62 @@ img {
     justify-content: center;
     position: relative;
     isolation: isolate;
-    background: #ffffff;
-    border: 1px solid rgba(17, 17, 17, 0.08);
+    overflow: hidden;
+    padding: 2px;
+    transition: all 0.22s ease;
   }
 
-  .shimmer-button::before {
-    content: "";
+  .shimmer-button__glow {
     position: absolute;
-    inset: -7px;
+    inset: -118%;
     border-radius: inherit;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(131, 121, 254, 0.22) 0%,
+        rgba(131, 121, 254, 0.14) 26%,
+        rgba(131, 121, 254, 0.07) 44%,
+        rgba(131, 121, 254, 0) 70%
+      ),
+      conic-gradient(
+        from 0deg,
+        rgba(131, 121, 254, 0) 0deg,
+        rgba(131, 121, 254, 0) 246deg,
+        rgba(131, 121, 254, 0.08) 282deg,
+        rgba(131, 121, 254, 0.66) 322deg,
+        rgba(131, 121, 254, 0.18) 346deg,
+        rgba(131, 121, 254, 0) 360deg
+      );
+    filter: blur(18px);
+    opacity: 0.96;
     pointer-events: none;
     z-index: -1;
-    transform-origin: center;
-    will-change: transform;
-    padding: 5px;
-    background: conic-gradient(
-      from 220deg,
-      rgba(167, 154, 255, 0) 0deg,
-      rgba(167, 154, 255, 0) 292deg,
-      rgba(167, 154, 255, 0.03) 306deg,
-      rgba(167, 154, 255, 0.12) 323deg,
-      rgba(142, 194, 255, 0.16) 338deg,
-      rgba(255, 183, 220, 0.12) 350deg,
-      rgba(255, 183, 220, 0.03) 356deg,
-      rgba(255, 183, 220, 0) 360deg
-    );
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    filter: blur(9px);
-    opacity: 0.42;
-    animation: shimmer-border 8s linear infinite;
+    animation: shimmer-rotate 5.2s linear infinite;
+    transition: opacity 0.22s ease, filter 0.22s ease;
   }
 
-  .shimmer-button:hover::before {
-    opacity: 0.5;
+  .shimmer-button__content {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    background: #ffffff;
+    padding: 1rem 1.75rem;
+    transition: all 0.22s ease;
+  }
+
+  .shimmer-button:hover {
+    background: transparent;
+  }
+
+  .shimmer-button:hover .shimmer-button__glow {
+    filter: blur(14px);
+    opacity: 1;
+  }
+
+  .shimmer-button:hover .shimmer-button__content {
+    background: #ffffff;
   }
 }

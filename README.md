@@ -12,7 +12,6 @@ src/
     page.tsx
   components/
     layout/
-      Footer.tsx
       Header.tsx
     sections/
       About.tsx

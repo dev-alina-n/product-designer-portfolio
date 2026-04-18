@@ -23,9 +23,10 @@ export function Contacts() {
               href={primaryLink.href}
               target={primaryLink.href.startsWith("mailto:") ? undefined : "_blank"}
               rel={primaryLink.href.startsWith("mailto:") ? undefined : "noreferrer"}
-              className="shimmer-button rounded-full px-7 py-[1rem] text-[0.95rem] text-ink transition-transform hover:-translate-y-px"
+              className="shimmer-button rounded-full text-[0.95rem] text-ink"
             >
-              {primaryLink.label}
+              <span aria-hidden="true" className="shimmer-button__glow" />
+              <span className="shimmer-button__content">{primaryLink.label}</span>
             </a>
           ) : null}
 

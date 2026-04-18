@@ -1,7 +1,7 @@
 export const siteMeta = {
   name: "Алина Нурмамедова",
   email: "alina.nurmamedova@bk.ru",
-  telegram: "https://t.me/localhost_1337",
+  telegram: "https://t.me/port7070",
   cv: "#",
 };
 
@@ -14,26 +14,24 @@ export const navigationItems = [
 
 export const heroContent = {
   intro:
-    "Более 3 лет создаю web-сервисы в сфере B2C. Провожу UX-исследования и работаю с метриками",
+    "Более 3 лет создаю web-сервисы в сфере B2B. Провожу UX-исследования и работаю с метриками",
   title: "Product Designer",
 };
 
 export const cases = [
   {
-    year: "2025",
+    category: "SaaS",
+    title: "HUB — облачная система товароучёта",
+    description: "Спроектировала SaaS-сервис для продавцов на маркетплейсах, который заменил внешнее решение и стал частью экосистемы. Это дало рост LTV и вдвое снизило нагрузку на техподдержку.",
+    href: "#",
+    imagePath: "/images/case1.webp",
+  },
+  {
     category: "B2B",
-    title: "Кейс 1",
+    title: "Личный кабинет Beeline",
     description: "Описание проекта будет добавлено позже.",
     href: "#",
     imagePath: "/images/case-1-placeholder.jpg",
-  },
-  {
-    year: "2024",
-    category: "SaaS",
-    title: "Кейс 2",
-    description: "Описание проекта будет добавлено позже.",
-    href: "#",
-    imagePath: "/images/case-2-placeholder.jpg",
   },
 ];
 
@@ -49,19 +47,14 @@ export const aboutContent = {
 
 export const experienceItems = [
   {
-    dates: "2025 — настоящее время",
+    dates: "2022 — настоящее время",
     role: "Product Designer",
-    company: "Company Name",
+    company: "Beeline",
   },
   {
-    dates: "2023 — 2025",
+    dates: "2020 — 2022",
     role: "Product Designer",
-    company: "Company Name",
-  },
-  {
-    dates: "2022 — 2023",
-    role: "UX/UI Designer",
-    company: "Company Name",
+    company: "Topseller",
   },
 ];
 

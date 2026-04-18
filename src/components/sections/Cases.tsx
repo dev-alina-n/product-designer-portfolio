@@ -1,5 +1,9 @@
 import { cases } from "@/data/site";
 
+type CaseCardProps = (typeof cases)[number] & {
+  year?: string;
+};
+
 function CaseCard({
   year,
   category,
@@ -7,7 +11,7 @@ function CaseCard({
   description,
   href,
   imagePath,
-}: (typeof cases)[number]) {
+}: CaseCardProps) {
   return (
     <a
       href={href}
@@ -21,13 +25,14 @@ function CaseCard({
         />
         <div className="space-y-3.5">
           <p className="text-[0.7rem] uppercase tracking-[0.18em] text-muted">
-            {year} {category}
+            {year ? `${year} ` : ""}
+            {category}
           </p>
-          <div className="space-y-2.5">
+          <div className="w-full space-y-2.5">
             <h3 className="text-[1.85rem] font-medium leading-[1.02] tracking-[-0.04em] text-ink sm:text-[2.05rem]">
               {title}
             </h3>
-            <p className="max-w-[36ch] text-[0.95rem] leading-7 text-muted">
+            <p className="w-full translate-y-2 text-[0.95rem] leading-7 text-muted opacity-0 transition-all duration-300 ease-out pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto">
               {description}
             </p>
           </div>
@@ -38,14 +43,16 @@ function CaseCard({
 }
 
 export function Cases() {
+  const caseItems: CaseCardProps[] = cases;
+
   return (
     <section
       id="cases"
       className="section-shell scroll-mt-24 pb-20 pt-12 sm:scroll-mt-28 sm:pb-28 sm:pt-14 lg:scroll-mt-32 lg:pb-32 lg:pt-16"
     >
       <div className="grid gap-14 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-16">
-        {cases.map((item) => (
-          <CaseCard key={`${item.year}-${item.title}`} {...item} />
+        {caseItems.map((item) => (
+          <CaseCard key={`${item.year ?? "case"}-${item.title}`} {...item} />
         ))}
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { About } from "@/components/sections/About";
 import { Cases } from "@/components/sections/Cases";
@@ -17,7 +16,6 @@ export default function HomePage() {
         <Experience />
         <Contacts />
       </main>
-      <Footer />
     </>
   );
 }

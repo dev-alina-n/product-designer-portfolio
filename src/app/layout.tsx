@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Алина Нурмамедова — Product Designer",
   description:
-    "Портфолио Алины Нурмамедовой: продуктовый дизайн, UX-исследования, web и mobile-сервисы.",
+    "Портфолио Алины Нурмамедовой: продуктовый дизайн, UX-исследования, web-сервисы.",
 };
 
 export default function RootLayout({

@@ -24,12 +24,11 @@ export function Header() {
               />
             </div>
             <div className="min-w-0">
-              <a
-                href="#top"
+              <p
                 className="block truncate text-[0.92rem] font-medium tracking-[-0.03em] text-ink"
               >
                 {siteMeta.name}
-              </a>
+              </p>
               <a
                 href={`mailto:${siteMeta.email}`}
                 className="mt-1 block truncate text-[0.74rem] leading-none text-muted transition-colors hover:text-ink"
