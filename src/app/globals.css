@@ -119,3 +119,23 @@ img {
     background: #ffffff;
   }
 }
+
+#btn-root:hover {
+  transition: all 300ms;
+}
+
+#btn {
+  background: #5C24FF;
+  color: white;
+  transition: all 300ms;  
+}
+
+#btn-root:hover {
+  box-shadow: 0 0 10px #5C24FF;
+}
+
+#btn-root:hover #btn {
+  background: white;
+  color: #5C24FF;
+}
+

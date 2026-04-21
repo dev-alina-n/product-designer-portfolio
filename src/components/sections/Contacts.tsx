@@ -20,13 +20,13 @@ export function Contacts() {
         <div className="mt-12 flex flex-col items-center">
           {primaryLink ? (
             <a
+              id="btn-root"
               href={primaryLink.href}
               target={primaryLink.href.startsWith("mailto:") ? undefined : "_blank"}
               rel={primaryLink.href.startsWith("mailto:") ? undefined : "noreferrer"}
               className="shimmer-button rounded-full text-[0.95rem] text-ink"
             >
-              <span aria-hidden="true" className="shimmer-button__glow" />
-              <span className="shimmer-button__content">{primaryLink.label}</span>
+              <span id="btn" className="shimmer-button__content">{primaryLink.label}</span>
             </a>
           ) : null}
 
