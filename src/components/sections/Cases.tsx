@@ -4,7 +4,7 @@ type CaseCardProps = (typeof cases)[number] & {
   year?: string;
 };
 
-function CaseCard({
+export function CaseCard({
   year,
   category,
   title,

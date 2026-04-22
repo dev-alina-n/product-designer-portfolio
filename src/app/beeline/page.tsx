@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Contacts } from "@/components/sections/Contacts";
-import { siteMeta } from "@/data/site";
+import { CaseCard } from "@/components/sections/Cases";
+import { cases, siteMeta } from "@/data/site";
 
 const beelineCase = {
   title: "pro beeline",
@@ -163,24 +164,15 @@ function MediaImage({
 }
 
 function OtherProjectCard() {
+  const otherProject = cases.find((item) => item.href === "/hub");
+
+  if (!otherProject) {
+    return null;
+  }
+
   return (
     <div className="mx-auto max-w-[720px]">
-      <Link href="/hub" className="group block transition-transform duration-300 hover:-translate-y-0.5">
-        <article className="space-y-6">
-          <div
-            className="aspect-[1.14/1] rounded-[28px] border border-line bg-[#d8d8d3] bg-cover bg-center transition-opacity duration-300 group-hover:opacity-95"
-            style={{ backgroundImage: "none" }}
-            aria-label={beelineCase.otherProjectTitle}
-          />
-          <div className="space-y-3.5 text-left">
-            <div className="space-y-2.5">
-              <h3 className="text-[1.72rem] font-medium leading-[1.02] tracking-[-0.04em] text-ink sm:text-[1.95rem]">
-                {beelineCase.otherProjectTitle}
-              </h3>
-            </div>
-          </div>
-        </article>
-      </Link>
+      <CaseCard {...otherProject} />
     </div>
   );
 }
