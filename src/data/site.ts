@@ -47,12 +47,12 @@ export const aboutContent = {
 
 export const experienceItems = [
   {
-    dates: "2022 — настоящее время",
+    dates: "2024 — настоящее время",
     role: "Product Designer",
     company: "Beeline",
   },
   {
-    dates: "2020 — 2022",
+    dates: "2022 — 2024",
     role: "Product Designer",
     company: "Topseller",
   },

@@ -165,7 +165,9 @@ export default function HubCasePage() {
                   Tg
                 </a>
                 <a
-                  href={siteMeta.cv}
+                  href="/files/Нурмамедова_Алина_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-12 w-12 items-center justify-center rounded-full border border-line bg-[rgba(255,255,255,0.6)] text-[0.98rem] text-muted transition-colors hover:text-ink"
                 >
                   Cv
