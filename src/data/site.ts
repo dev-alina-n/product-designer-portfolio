@@ -28,10 +28,10 @@ export const cases = [
   },
   {
     category: "B2B",
-    title: "Личный кабинет Beeline",
-    description: "Описание проекта будет добавлено позже.",
-    href: "#",
-    imagePath: "/images/case-1-placeholder.jpg",
+    title: "Личный кабинет Beeline B2B",
+    description: "Спроектировала ключевой сценарий работы с платежами в B2B-кабинете , объединив разрозненные счета и договоры в единый платежный документ. Это снизило количество ошибок и уменьшило нагрузку на техподдержку.",
+    href: "/beeline",
+    imagePath: "/images/case2.png",
   },
 ];
 
