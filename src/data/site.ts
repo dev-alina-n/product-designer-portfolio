@@ -2,13 +2,13 @@ export const siteMeta = {
   name: "Алина Нурмамедова",
   email: "alina.nurmamedova@bk.ru",
   telegram: "https://t.me/port7070",
-  cv: "#",
+  cv: "/files/Нурмамедова_Алина_CV.pdf",
 };
 
 export const navigationItems = [
   { label: "Обо мне", href: "#about" },
   { label: "Кейсы", href: "#cases" },
-  { label: "CV", href: siteMeta.cv, disabled: false },
+  { label: "CV", href: siteMeta.cv, disabled: false, external: true },
   { label: "Tg", href: siteMeta.telegram, external: true },
 ];
 
