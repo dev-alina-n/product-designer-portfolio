@@ -58,18 +58,22 @@ const beelineCase = {
   solutionTitle: "ЕПД — это единый платежный документ",
   solutionCards: [
     {
+      imageSrc: "/images/example1.svg",
       title: "Один платеж и одни реквизиты",
       text: "Все начисления объединены в один платёж — не нужно работать с разными реквизитами по каждому счету",
     },
     {
+      imageSrc: "/images/example2.svg",
       title: "Фиксированный период выставления",
       text: "Документ формируется раз в месяц в один и тот же период — не нужно отслеживать разные даты по счетам",
     },
     {
+      imageSrc: "/images/example3.svg",
       title: "Вся детализация — в одном документе",
       text: "Пользователь видит общую сумму и может посмотреть, из каких счетов она складывается — без переходов между разными документами",
     },
     {
+      imageSrc: "/images/example4.svg",
       title: "Одно место получения и оплаты",
       text: "Документ приходит в личный кабинет, где его можно сразу проверить и оплатить",
     },
@@ -178,18 +182,21 @@ function OtherProjectCard() {
 }
 
 function SolutionCard({
+  imageSrc,
   title,
   text,
 }: {
+  imageSrc: string;
   title: string;
   text: string;
 }) {
   return (
-    <article className="rounded-[24px] border border-line bg-[rgba(255,255,255,0.56)] p-6">
+    <article className="space-y-5">
+      <MediaImage src={imageSrc} alt={title} />
       <h3 className="text-[1.34rem] font-medium leading-[1.18] tracking-[0.03em] text-ink">
         {title}
       </h3>
-      <p className="mt-4 text-[0.98rem] leading-[1.72] text-muted">{text}</p>
+      <p className="text-[0.98rem] leading-[1.72] text-muted">{text}</p>
     </article>
   );
 }
@@ -359,21 +366,19 @@ export default function BeelineCasePage() {
           </div>
         </CaseSection>
 
-        <CaseSection label="РЕШЕНИЕ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.18rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
-              {beelineCase.solutionTitle}
-            </h2>
-          </div>
-        </CaseSection>
-
-        <section className="section-shell pt-10 sm:pt-12">
+        <section className="section-shell pt-24 sm:pt-28 lg:pt-[7.5rem] mb-12 mt-8">
           <div className="hub-page-shell">
-            <div className="hub-grid">
-              <div aria-hidden="true" />
-              <div className="hub-solution-grid">
+            <div className="hub-label">РЕШЕНИЕ</div>
+            <div className="beeline-solution-section">
+              <div className="mt-12">
+                <h2 className="text-[2.18rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
+                  {beelineCase.solutionTitle}
+                </h2>
+              </div>
+
+              <div className="beeline-solution-grid">
                 {beelineCase.solutionCards.map((item) => (
-                  <SolutionCard key={item.title} title={item.title} text={item.text} />
+                  <SolutionCard key={item.title} imageSrc={item.imageSrc} title={item.title} text={item.text} />
                 ))}
               </div>
             </div>
@@ -385,12 +390,6 @@ export default function BeelineCasePage() {
             <p className="text-[1rem] leading-[1.68] text-muted sm:text-[1.04rem]">{beelineCase.transfer}</p>
           </div>
         </CaseSection>
-
-         <section className="section-shell pt-16 sm:pt-20 lg:pt-24">
-          <div className="hub-page-shell">
-            <MediaImage src="/images/finance.png" alt="app" />
-          </div>
-        </section>
 
         <CaseSection label="РЕЗУЛЬТАТЫ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
@@ -551,6 +550,19 @@ export default function BeelineCasePage() {
           max-width: 700px;
         }
 
+        .beeline-solution-section {
+          margin-top: 20px;
+        }
+
+        .beeline-solution-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 24px;
+          width: 100%;
+          max-width: 100%;
+          margin-top: 40px;
+        }
+
         .hub-projects-marquee {
           height: 78px;
         }
@@ -576,6 +588,10 @@ export default function BeelineCasePage() {
 
           .hub-solution-grid {
             grid-template-columns: minmax(0, 1fr);
+          }
+
+          .beeline-solution-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
           }
         }
 
