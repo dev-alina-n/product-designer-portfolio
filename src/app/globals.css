@@ -47,7 +47,7 @@ img {
   }
 
   .section-label {
-    @apply text-[0.68rem] uppercase tracking-[0.18em] text-muted;
+    @apply text-[0.68rem] uppercase tracking-[0.05em] text-muted;
   }
 
   .soft-card {
@@ -138,4 +138,3 @@ img {
   background: white;
   color: #5C24FF;
 }
-

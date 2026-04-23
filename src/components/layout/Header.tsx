@@ -25,7 +25,7 @@ export function Header() {
             </div>
             <div className="min-w-0">
               <p
-                className="block truncate text-[0.92rem] font-medium tracking-[-0.03em] text-ink"
+                className="block truncate text-[0.92rem] font-medium tracking-[0.02em] text-ink"
               >
                 {siteMeta.name}
               </p>

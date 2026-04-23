@@ -186,7 +186,7 @@ function SolutionCard({
 }) {
   return (
     <article className="rounded-[24px] border border-line bg-[rgba(255,255,255,0.56)] p-6">
-      <h3 className="text-[1.34rem] font-medium leading-[1.18] tracking-[-0.03em] text-ink">
+      <h3 className="text-[1.34rem] font-medium leading-[1.18] tracking-[0.03em] text-ink">
         {title}
       </h3>
       <p className="mt-4 text-[0.98rem] leading-[1.72] text-muted">{text}</p>
@@ -235,7 +235,7 @@ export default function BeelineCasePage() {
           <div className="main-description">
               
               <div>
-                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[-0.06em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
+                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[0.03em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
                   {beelineCase.title}
                 </h1>
               </div>
@@ -285,13 +285,13 @@ export default function BeelineCasePage() {
         </section>
 
         <CaseSection label="ЦЕЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
+          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
             {beelineCase.goal}
           </h2>
         </CaseSection>
 
         <CaseSection label="МОЯ РОЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
+          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
             {beelineCase.roleLead}
           </h2>
 
@@ -326,7 +326,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ПРОБЛЕМЫ НА СТАРТЕ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.problemLead}
             </h2>
             <StarBulletList items={beelineCase.problemBullets} className="mt-9" />
@@ -335,7 +335,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ГИПОТЕЗЫ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.hypothesis}
             </h2>
           </div>
@@ -343,7 +343,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ИССЛЕДОВАНИЯ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.researchLead}
             </h2>
             <StarBulletList items={beelineCase.researchBullets} className="mt-9" />
@@ -361,7 +361,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="РЕШЕНИЕ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.18rem] font-normal leading-[1.34] tracking-[-0.05em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
+            <h2 className="hub-section-title text-[2.18rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
               {beelineCase.solutionTitle}
             </h2>
           </div>
@@ -388,7 +388,7 @@ export default function BeelineCasePage() {
 
          <section className="section-shell pt-16 sm:pt-20 lg:pt-24">
           <div className="hub-page-shell">
-            <MediaImage src="/images/lkbefore.png" alt="app" />
+            <MediaImage src="/images/finance.png" alt="app" />
           </div>
         </section>
 
@@ -411,7 +411,7 @@ export default function BeelineCasePage() {
         <section className="section-shell pb-4 pt-24 sm:pt-28 lg:pt-[7rem]">
           <div className="hub-page-shell">
             <div className="hub-projects-marquee overflow-hidden">
-              <div className="hub-projects-marquee__track flex w-max items-center gap-7 text-[3rem] font-medium leading-none tracking-[-0.06em] text-ink sm:text-[3.6rem] lg:text-[4rem]">
+              <div className="hub-projects-marquee__track flex w-max items-center gap-7 text-[3rem] font-medium leading-none tracking-[0.03em] text-ink sm:text-[3.6rem] lg:text-[4rem]">
                 <div className="flex items-center gap-7">
                   <span className="text-[#b7b0ff]">✦</span>
                   <span className="whitespace-nowrap">{beelineCase.otherProjects[0]}</span>
