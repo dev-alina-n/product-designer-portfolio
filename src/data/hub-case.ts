@@ -11,7 +11,7 @@ export const hubCase = {
     { value: "2 года", label: "Непрерывной работы" },
   ],
   meta: [
-    { label: "Год", value: "2020-2022" },
+    { label: "Год", value: "2022-2024" },
     { label: "Ниша", value: "B2B, SaaS" },
   ],
   team: [
