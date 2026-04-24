@@ -8,7 +8,7 @@ export const hubCase = {
   metrics: [
     { value: "30+", label: "Разделов и подразделов" },
     { value: "270+", label: "Уникальных экранов" },
-    { value: "3 года", label: "Непрерывной работы" },
+    { value: "2 года", label: "Непрерывной работы" },
   ],
   meta: [
     { label: "Год", value: "2020-2022" },
