@@ -14,7 +14,7 @@ export function Experience() {
           >
             <p className="text-[0.95rem] leading-7 text-muted">{item.dates}</p>
             <div>
-              <h3 className="text-[1.55rem] font-medium leading-[1.04] tracking-[0.03em] text-ink sm:text-[1.8rem]">
+              <h3 className="text-[1.55rem] font-medium leading-[1.04] tracking-[0.01em] text-ink sm:text-[1.8rem]">
                 {item.role}
               </h3>
               <p className="mt-3 text-[1rem] leading-7 text-muted">{item.company}</p>

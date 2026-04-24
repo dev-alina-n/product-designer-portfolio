@@ -162,7 +162,7 @@ export default function HubCasePage() {
           <div className="hub-page-shell">
             <div className="hub-grid hub-intro-grid">
               <div>
-                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[0.03em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
+                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[0.01em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
                   {hubCase.title}
                 </h1>
               </div>
@@ -222,13 +222,13 @@ export default function HubCasePage() {
         </section>
 
         <CaseSection label="ЦЕЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
+          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
             {hubCase.goal}
           </h2>
         </CaseSection>
 
         <CaseSection label="МОЯ РОЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
+          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
             {hubCase.roleLead}
           </h2>
 
@@ -267,7 +267,7 @@ export default function HubCasePage() {
           <div className="hub-text-column space-y-14">
             {hubCase.researchBlocks.map((item) => (
               <div key={item.title}>
-                <h2 className="text-[2rem] font-medium leading-[1.16] tracking-[0.03em] text-ink sm:text-[2.3rem]">
+                <h2 className="text-[2rem] font-medium leading-[1.16] tracking-[0.01em] text-ink sm:text-[2.3rem]">
                   {item.title}
                 </h2>
                 <p className="mt-5 text-[1rem] leading-[1.68] text-muted sm:text-[1.04rem]">
@@ -285,7 +285,7 @@ export default function HubCasePage() {
         </section>
 
         <CaseSection label="UI-РЕШЕНИЕ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[18ch] text-[2.18rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
+          <h2 className="hub-section-title max-w-[18ch] text-[2.18rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
             {hubCase.uiSolutionTitle}
           </h2>
         </CaseSection>
@@ -296,7 +296,7 @@ export default function HubCasePage() {
               <div aria-hidden="true" />
               <div className="hub-comparison-card">
                 <div className="space-y-8">
-                  <h3 className="text-[2.12rem] font-medium leading-[1.08] tracking-[0.03em] text-ink">
+                  <h3 className="text-[2.12rem] font-medium leading-[1.08] tracking-[0.01em] text-ink">
                     Было:
                   </h3>
 
@@ -323,7 +323,7 @@ export default function HubCasePage() {
               <div aria-hidden="true" />
               <div className="hub-comparison-card">
                 <div className="space-y-8">
-                  <h3 className="text-[2.12rem] font-medium leading-[1.08] tracking-[0.03em] text-ink">
+                  <h3 className="text-[2.12rem] font-medium leading-[1.08] tracking-[0.01em] text-ink">
                     Стало:
                   </h3>
 
@@ -346,7 +346,7 @@ export default function HubCasePage() {
 
         <CaseSection label="ДИЗАЙН-СИСТЕМА" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {hubCase.designSystemLead}
             </h2>
             <StarBulletList items={hubCase.designSystemBullets} className="mt-9" />
@@ -355,7 +355,7 @@ export default function HubCasePage() {
 
         <CaseSection label="РЕЗУЛЬТАТЫ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]" contentClassName="hub-results-layout">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {hubCase.resultsLead}
             </h2>
             <StarBulletList items={hubCase.resultsBullets} className="mt-9" />

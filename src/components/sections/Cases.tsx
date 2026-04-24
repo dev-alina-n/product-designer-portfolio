@@ -29,7 +29,7 @@ export function CaseCard({
             {category}
           </p>
           <div className="w-full space-y-2.5">
-            <h3 className="text-[1.85rem] font-medium leading-[1.02] tracking-[0.03em] text-ink sm:text-[2.05rem]">
+            <h3 className="text-[1.85rem] font-medium leading-[1.02] tracking-[0.01em] text-ink sm:text-[2.05rem]">
               {title}
             </h3>
             <p className="w-full translate-y-2 text-[0.95rem] leading-7 text-muted opacity-0 transition-all duration-300 ease-out pointer-events-none group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto">

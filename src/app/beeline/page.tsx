@@ -193,7 +193,7 @@ function SolutionCard({
   return (
     <article className="space-y-5">
       <MediaImage src={imageSrc} alt={title} />
-      <h3 className="text-[1.34rem] font-medium leading-[1.18] tracking-[0.03em] text-ink">
+      <h3 className="text-[1.34rem] font-medium leading-[1.18] tracking-[0.01em] text-ink">
         {title}
       </h3>
       <p className="text-[0.98rem] leading-[1.72] text-muted">{text}</p>
@@ -242,7 +242,7 @@ export default function BeelineCasePage() {
           <div className="main-description">
               
               <div>
-                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[0.03em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
+                <h1 className="text-[3.2rem] font-medium leading-[0.96] tracking-[0.01em] text-ink sm:text-[4rem] lg:text-[4.4rem]">
                   {beelineCase.title}
                 </h1>
               </div>
@@ -292,13 +292,13 @@ export default function BeelineCasePage() {
         </section>
 
         <CaseSection label="ЦЕЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
+          <h2 className="hub-section-title max-w-[16ch] text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.76rem]">
             {beelineCase.goal}
           </h2>
         </CaseSection>
 
         <CaseSection label="МОЯ РОЛЬ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
-          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
+          <h2 className="hub-section-title max-w-[19ch] text-[1.96rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.32rem] lg:text-[2.68rem]">
             {beelineCase.roleLead}
           </h2>
 
@@ -333,7 +333,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ПРОБЛЕМЫ НА СТАРТЕ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.problemLead}
             </h2>
             <StarBulletList items={beelineCase.problemBullets} className="mt-9" />
@@ -342,7 +342,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ГИПОТЕЗЫ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.hypothesis}
             </h2>
           </div>
@@ -350,7 +350,7 @@ export default function BeelineCasePage() {
 
         <CaseSection label="ИССЛЕДОВАНИЯ" className="pt-24 sm:pt-28 lg:pt-[7.5rem]">
           <div className="hub-text-column">
-            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
+            <h2 className="hub-section-title text-[2.02rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.7rem]">
               {beelineCase.researchLead}
             </h2>
             <StarBulletList items={beelineCase.researchBullets} className="mt-9" />
@@ -371,7 +371,7 @@ export default function BeelineCasePage() {
             <div className="hub-label">РЕШЕНИЕ</div>
             <div className="beeline-solution-section">
               <div className="mt-12">
-                <h2 className="text-[2.18rem] font-normal leading-[1.34] tracking-[0.03em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
+                <h2 className="text-[2.18rem] font-normal leading-[1.34] tracking-[0.01em] text-ink sm:text-[2.42rem] lg:text-[2.8rem]">
                   {beelineCase.solutionTitle}
                 </h2>
               </div>
